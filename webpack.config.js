@@ -9,9 +9,15 @@ module.exports = {
         rules:[
             {
                 test:/\.css$/,
-                user:[
+                use:[
                     'style-loader',
                     'css-loader'
+                ]
+            },
+            {
+                test:/\.(png|svg|jpg|gif)$/,
+                use:[
+                    'file-loader'
                 ]
             }
         ]
